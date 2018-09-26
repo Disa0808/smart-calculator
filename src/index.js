@@ -36,9 +36,17 @@ class SmartCalculator {
 
   getResultExression(expression) {
     const operations =  [
-                          {'^': (a, b) => Math.pow(a, b)},
-                          {'*': (a, b) => a * b, '/': (a, b) => a / b},
-                          {'+': (a, b) => a + b, '-': (a, b) => a - b}    // Array contain all posible operations
+                          {
+                            '^': (a, b) => Math.pow(a, b)
+                          },
+                          {
+                            '*': (a, b) => a * b,                        // Array contain all posible operations       
+                            '/': (a, b) => a / b
+                          },
+                          {
+                            '+': (a, b) => a + b, 
+                            '-': (a, b) => a - b
+                          }    
                         ];
     let tmpExpression = [],                                               // For tmp expression
         curOperation;                                                     // Variable wich contain current operation
